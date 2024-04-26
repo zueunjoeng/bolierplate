@@ -43,12 +43,49 @@
 
     <!-- 커스터마이징 -->
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/개별이름수정하기.css">
+    <link rel="stylesheet" href="./css/je.css">
     <!-- 팀원들의 스타일 -->
 </head>
 <body>
-    <!-- 공통컨텐츠 : header, footer, aside -->
+    <div class="container d-flex" id="tabSeaction">
+        <div class="col-6 bg-light noticelist d-flex flex-column justify-content-center align-items-center">
+            <h2>공지사항</h2>
+            <ul>
+                <li><a href="">공지사항제목들나옵니다.</a></li>
+                <li><a href="">공지사항제목들나옵니다.</a></li>
+                <li><a href="">공지사항제목들나옵니다.</a></li>
+                <li><a href="">공지사항제목들나옵니다.</a></li>
+                <li><a href="">공지사항제목들나옵니다.</a></li>
+            </ul>
+        </div>
+        <div class="col-6 border" id="swiperReview">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+
+                 <div class="swiper-slide bg-warning d-flex justify-content-center align-items-center">첫번째 배너</div>
+                 <div class="swiper-slide bg-dark text-white">두번쨰 배너</div>
+                 <div class="swiper-slide bg-light">세번째 배너</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>          
+        </div>
+    </div>
   
+    <script>
+    const swiper = new Swiper('.swiper', {
+                                loop: true,
+
+                                pagination: {
+                                    el: '.swiper-pagination',
+                                    clickable: true,
+                                    //슬라이드 밑 점을 누르면 움직일 수 있게 
+                                },
+                                autoplay: {
+                                    delay: 1500,
+                                    //1000이 1초
+                                    disableOnInteraction: false,
+                                },
+                    });
+    </script>
 </body>
 </html>
-
